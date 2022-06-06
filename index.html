@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BookIt</title>
+    <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
     <!-- Login Form -->
@@ -25,14 +26,39 @@
         <input type="submit" value="Register"/><br><br>
     </form> -->
 
-    <!-- Search Hotel -->
+    <!-- Compare Hotel -->
     <!-- <form method="post" action="#">
-        <input type="text" name="hotel" placeholder="Enter a hotel" required/><br><br>
+        <select name="hotel" required>
+            <option value="" disabled selected hidden>Choose Hotel...</option>
+            <option value="Westin">Westin</option>
+            <option value="Raddison Blu">Raddison Blu</option>
+            <option value="Garden Court">Garden Court</option>
+            <option value="Southern Sun">Southern Sun</option>
+        </select><br><br>
         <input type="date" name="checkIn" placeholder="Check in" required/><br><br>
         <input type="date" name="checkOut" placeholder="Check out" required/><br><br>
         <input type="number" name="rooms" placeholder="No. of Rooms" min="0" required/><br><br>
         <input type="submit" value="Compare"/><br><br>
     </form> -->
+
+    <!-- Compare and book -->
+    <div class="grid-container">
+        <div class="hotel">
+            <p>You are booking Westin Hotel</p>
+        </div>
+        <div class="hotel">
+            <p>You are booking Raddison Blu Hotel</p>
+        </div>
+        <div class="hotel">
+            <p>You are booking Garden Court Hotel</p>
+        </div>
+        <div class="hotel">
+            <p>You are booking Southern Sun Hotel</p>
+        </div>
+    </div>
+    
+    <div class="compare"><button>Compare</button></div>
+    
 
     
     
