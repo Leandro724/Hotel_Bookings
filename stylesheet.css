@@ -4,8 +4,8 @@
 
 :root {
   --accent-color: #e47813;
-  --heading-font-family: sans-serif;
-  --body-font-family: sans-serif;
+  --heading-font-family: 'Courier New', monospace;
+  --body-font-family: 'Courier New', monospace;
 }
 
 body {
@@ -17,4 +17,107 @@ body {
   justify-content: center;
   align-items: center;
 }
+.hotel-comparison {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  width:100% ;
+  margin: 1rem;
+}
+img {
+  object-fit: contain;
+  max-height: 100px;
+  width: 100%;
+}
+
+.hotel-column {
+  background-color: white;
+  box-shadow: 0 8px 30px rgba(225, 140, 20, 0.3) ;
+  padding: 1rem;
+  flex-grow: 1;
+  max-width: 300px;
+  border-radius: 5px;
+}
+.hotel-column.cheapest {
+  position: relative;
+  background-color: var(--accent-color);
+  box-shadow: 0 8px 30px rgba(245, 145, 6, 0.7) ;
+  color: white;
+  margin-top: -1rem;
+  padding-top: 2rem;
+  margin-bottom: -1rem;
+  padding-bottom: 2rem;
+}
+.hotel-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+}
+.hotel-name {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+.divider {
+  height: 3px;
+  width: 100%;
+  background-color: rgb(186, 109, 32, 0.6);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.hotel-column.cheapest .divider{
+  background-color: rgba(218, 213, 207, 0.95);
+}
+.feature {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem;
+}
+.feature svg {
+  margin-right: 0.5rem;
+  height: 1.5em;
+  width: 1.5em;
+}
+.feature.inactive {
+  color: #999;
+  text-decoration-line: line-through;
+}
+.most-cheapest{
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  right: 0.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-family: var(--heading-font-family);
+}
+.cta{
+  border: none;
+  background-color: var(--accent-color);
+  color: white;
+  width: 100%;
+  padding: 0.75rem 0.8rem;
+  cursor: pointer;
+  font-family: var(--heading-font-family);
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 3rem;
+  transition: 150ms;
+  transform: scale(1) ;
+}
+.hotel-column.cheapest .cta{
+  background-color: white;
+  color: var(--accent-color);
+}
+.cta:hover, .cta:focus {
+  transform: scale(1.06);
+}
+
+
+
+
 
