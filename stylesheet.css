@@ -17,6 +17,10 @@ body {
   justify-content: center;
   align-items: center;
 }
+p{
+  font-family: var(--heading-font-family);
+  color: var(--accent-color);
+}
 .hotel-comparison {
   display: flex;
   justify-content: center;
@@ -95,7 +99,7 @@ img {
   font-weight: bold;
   font-family: var(--heading-font-family);
 }
-.cta{
+.button{
   border: none;
   background-color: var(--accent-color);
   color: white;
@@ -105,11 +109,11 @@ img {
   font-family: var(--heading-font-family);
   font-weight: bold;
   border-radius: 5px;
-  margin-top: 3rem;
+  margin-top: 1rem;
   transition: 150ms;
   transform: scale(1) ;
 }
-.hotel-column.cheapest .cta{
+.hotel-column.cheapest .button{
   background-color: white;
   color: var(--accent-color);
 }
@@ -120,6 +124,27 @@ img {
 .price-plan {
   display: flex;
 }
+
+.inputField{
+  border: none;
+  background-color: white;
+  color: var(--accent-color);
+  width: 80%;
+  padding: 0.55rem 0.6rem;
+  font-family: var(--heading-font-family);
+  border-radius: 5px;
+}
+form{
+  padding: 3rem;
+  background-color: #79746e;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
 
 
 
