@@ -117,7 +117,7 @@ img {
   background-color: white;
   color: var(--accent-color);
 }
-.cta:hover, .cta:focus {
+.button:hover, .button:focus {
   transform: scale(1.06);
 }
 
@@ -135,6 +135,8 @@ img {
   border-radius: 5px;
 }
 form{
+  border-radius: 15px;
+  width: 70%;
   padding: 3rem;
   background-color: #79746e;
   display: flex;
