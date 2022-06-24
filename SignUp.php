@@ -1,5 +1,8 @@
 <!-- Rquire a SignUp class for new users once the form is submitted -->
-<?php require("newUser.php")?>
+<?php 
+require("SignUpClass.php")
+
+?>
 
 <!-- Once the form is submitted the following data will be captured -->
 <?php 
@@ -28,8 +31,12 @@ if(isset($_POST['submit'])){
         <input class="inputField" type="text" name="email" placeholder="Email Address" required/><br><br>
         <input class="inputField" type="password" name="password" placeholder="Password" required/><br><br>
         <button class="button" type="submit" name="submit">Sign Up</button>
-        <p><?php echo @$user ->error?></p>
-        <p><?php echo @$user ->success?></p>
+        <p><?php
+          echo @$user ->error
+         ?></p>
+        <p><?php
+          echo @$user ->success
+         ?></p>
         <p>Already have an account? <a href="login.php">Login Here.</a></p><br><br>
     </form>
     
