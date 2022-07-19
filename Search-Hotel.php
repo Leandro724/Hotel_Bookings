@@ -11,6 +11,16 @@ if(isset($_GET['logout'])){
 }
 
 ?>
+
+<?php
+//  Carrying over the selected dates for the booking to the Compare&Book file
+ if(isset($_POST['submit'])){
+   
+    $checkIn =  $_POST['checkIn'];
+    $checkOut =  $_POST['checkOut']; 
+}
+ 
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +31,7 @@ if(isset($_GET['logout'])){
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <form method="post" action="Compare&Book.html">
+    <form method="post" action="Compare&Book.php">
       <!-- The Users name will appear once the session is active -->
       <p>Welcome <?php echo $_SESSION['user']; ?><p>
 	    <a href="?logout">Log out</a>
@@ -40,8 +50,7 @@ if(isset($_GET['logout'])){
     <!-- Number of geusts and rooms -->
         <input class="inputField" type="number" name="guests" placeholder="No. of Guests" min="0" required/><br><br>
         <input class="inputField" type="number" name="rooms" placeholder="No. of Rooms" min="0" required/><br><br>
-    <!-- Price per night for selected hotel -->
-        <p>R_____/night</p>
+ 
         <input class="button" type="submit" value="Compare"/><br><br>
         <a href="Compare&Book.php">Compare</a></p>
     </form>
