@@ -31,12 +31,13 @@ if(isset($_GET['logout'])){
     <link rel="stylesheet" href="stylesheet.css">
 </head>
 <body>
-    <form method="post" action="Compare&Book.php">
+<form method="post" action="Compare&Book.php">
       <!-- The Users name will appear once the session is active -->
       <p>Welcome <?php echo $_SESSION['user']; ?><p>
 	    <a href="?logout">Log out</a>
         <p>Compare and Save a few bucks on the hotel of your choice!</p>
     <!-- Dropdown list of available hotels -->
+    <label class="label">Select Hotel</label>
         <select class="inputField" name="hotel" required>
             <option value="" disabled selected hidden>Choose Hotel...</option>
             <option value="Westin">Westin</option>
@@ -45,14 +46,18 @@ if(isset($_GET['logout'])){
             <option value="Southern Sun">Southern Sun</option>
         </select><br><br>
     <!-- Checkin and checkout dates -->
+    <label class="label">Check in</label>
         <input class="inputField" type="date" name="checkIn" placeholder="Check in" required/><br><br>
+    <label class="label">Check out</label>    
         <input class="inputField" type="date" name="checkOut" placeholder="Check out" required/><br><br>
     <!-- Number of geusts and rooms -->
+    <label class="label">Guests</label>
         <input class="inputField" type="number" name="guests" placeholder="No. of Guests" min="0" required/><br><br>
+    <label class="label">Rooms</label>
         <input class="inputField" type="number" name="rooms" placeholder="No. of Rooms" min="0" required/><br><br>
  
         <input class="button" type="submit" value="Compare"/><br><br>
-        <a href="Compare&Book.php">Compare</a></p>
+       
     </form>
 
 </body>

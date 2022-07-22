@@ -193,8 +193,9 @@
             $total = $Hotels['Southern Sun']*dateDiffInDays($_POST['checkIn'], $_POST['checkOut']);
             echo "R".$total." total"; 
             ?>
+             <input class="button" type="submit" value="Book Now"/>
          </div>
-            <input class="button" type="submit" value="Book Now"/>
+           
         </div>
      </div>
 </body>
